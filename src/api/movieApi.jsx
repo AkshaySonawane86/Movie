@@ -10,6 +10,28 @@ const BASE_URL = "https://api.themoviedb.org/3";
 //   );
 // };
 
+// export const getPopularMovies = async () => {
+//   const url = 'https://imdb-top-100-movies.p.rapidapi.com/'; // New API URL
+// const options = {
+//   method: 'GET',
+//   headers: {
+//     'x-rapidapi-key': '5ed23b630amsh48125dfbd174797p1a3e69jsnab37ed84d804', // Replace with your RapidAPI key
+//     'x-rapidapi-host': 'imdb-top-100-movies.p.rapidapi.com', // API host header
+//   },
+// };
+
+// try {
+//   const response = await fetch(url, options);
+//   const result = await response.json(); // Parse the response as JSON
+//   console.log("Popular Movies:", result); // Log the result to the console
+//   return result; // Return the result data
+// } catch (error) {
+//   console.error("Error fetching popular movies:", error);
+// }
+
+// };
+
+
 export const getPopularMovies = () => {
     return axios
       .get(`${BASE_URL}/movie/popular?api_key=${API_KEY}&language=en-US&page=1`)
